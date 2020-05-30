@@ -45,10 +45,18 @@ html {
   z-index: 1;
 }
 
-.colors {
+.options {
   display: flex;
   position: fixed;
   bottom: 2em;
+  right: 2em;
+  z-index: 3;
+}
+
+.notes {
+  display: flex;
+  position: fixed;
+  top: 2em;
   right: 2em;
   z-index: 3;
 }
