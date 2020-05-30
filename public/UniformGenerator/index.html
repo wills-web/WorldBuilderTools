@@ -11,19 +11,29 @@
 
         <div id="model-container">
 
-            <img class="item-headgear" src="img/headgear/headgear1.png" style="z-index: 999;">
+            <img id="image-headgear" class="item-headgear" src="img/blank.png" style="z-index: 999;">
 
-            <object type="image/svg+xml" data="img/tops/Type1/tunic_buckle.svg" class="product-svg" id="element-tunic-buckle" style="z-index: 100;"></object>
-            <object type="image/svg+xml" data="img/tops/Type1/tunic_belt.svg" class="product-svg" id="element-tunic-belt" style="z-index: 99;"></object>
-            <object type="image/svg+xml" data="img/tops/Type1/tunic_epaulettebuttons.svg" class="product-svg" id="element-tunic-epaulettebuttons" style="z-index: 90;"></object>
-            <object type="image/svg+xml" data="img/tops/Type1/tunic_jacketbuttons.svg" class="product-svg" id="element-tunic-jacketbuttons" style="z-index: 90;"></object>
-            <object type="image/svg+xml" data="img/tops/Type1/tunic_pocketbuttons.svg" class="product-svg" id="element-tunic-pocketbuttons" style="z-index: 90;"></object>
-            <object type="image/svg+xml" data="img/tops/Type1/tunic_tie.svg" class="product-svg" id="element-tunic-tie" style="z-index: 81;"></object>
-            <object type="image/svg+xml" data="img/tops/Type1/tunic_undershirt.svg" class="product-svg" id="element-tunic-undershirt" style="z-index: 80;"></object>
-            <object type="image/svg+xml" data="img/tops/Type1/tunic_base.svg" class="product-svg" id="element-tunic-base" style="z-index: 10;"></object>
+            <object type="image/svg+xml" data="img/tops/Type1/tunic_buckle.svg" class="product-svg"
+                id="element-tunic-buckle" style="z-index: 100;"></object>
+            <object type="image/svg+xml" data="img/tops/Type1/tunic_belt.svg" class="product-svg"
+                id="element-tunic-belt" style="z-index: 99;"></object>
+            <object type="image/svg+xml" data="img/tops/Type1/tunic_epaulettebuttons.svg" class="product-svg"
+                id="element-tunic-epaulettebuttons" style="z-index: 90;"></object>
+            <object type="image/svg+xml" data="img/tops/Type1/tunic_jacketbuttons.svg" class="product-svg"
+                id="element-tunic-jacketbuttons" style="z-index: 90;"></object>
+            <object type="image/svg+xml" data="img/tops/Type1/tunic_pocketbuttons.svg" class="product-svg"
+                id="element-tunic-pocketbuttons" style="z-index: 90;"></object>
+            <object type="image/svg+xml" data="img/tops/Type1/tunic_tie.svg" class="product-svg" id="element-tunic-tie"
+                style="z-index: 81;"></object>
+            <object type="image/svg+xml" data="img/tops/Type1/tunic_undershirt.svg" class="product-svg"
+                id="element-tunic-undershirt" style="z-index: 80;"></object>
+            <object type="image/svg+xml" data="img/tops/Type1/tunic_base.svg" class="product-svg"
+                id="element-tunic-base" style="z-index: 10;"></object>
 
-            <object type="image/svg+xml" data="img/trousers/Type1/trousers_stripes.svg" class="product-svg" id="element-trousers-stripes" style="z-index: 9;"></object>
-            <object type="image/svg+xml" data="img/trousers/Type1/trousers_base.svg" class="product-svg" id="element-trousers-base" style="z-index: 8;"></object>
+            <object type="image/svg+xml" data="img/trousers/Type1/trousers_stripes.svg" class="product-svg"
+                id="element-trousers-stripes" style="z-index: 9;"></object>
+            <object type="image/svg+xml" data="img/trousers/Type1/trousers_base.svg" class="product-svg"
+                id="element-trousers-base" style="z-index: 8;"></object>
 
             <img class="background-image" src="img/test_base.png" alt="">
         </div>
@@ -51,7 +61,8 @@
                     <label for="colour-tunic-pocketbuttons">Tunic Pocket Buttons</label>
                 </li>
                 <li>
-                    <input type="color" id="colour-tunic-epaulettebuttons" name="colour-tunic-epaulettebuttons" value="#000">
+                    <input type="color" id="colour-tunic-epaulettebuttons" name="colour-tunic-epaulettebuttons"
+                        value="#000">
                     <label for="colour-tunic-epaulettebuttons">Tunic Epaulette Buttons</label>
                 </li>
                 <li>
@@ -71,6 +82,31 @@
                 <li>
                     <input type="color" id="colour-trousers-stripes" name="colour-trousers-stripes" value="#000">
                     <label for="colour-trousers-stripes">Trouser Stripes</label>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <select id="select-headgear" name="select-headgear">
+                        <option value="none" default>No Headgear</option>
+                        <option value="headgear1">Kepi with Feather</option>
+                        <option value="headgear2">Pith Helmet</option>
+                        <option value="headgear3">Visor Cap Enlisted</option>
+                        <option value="headgear4">Visor Cap Officer</option>
+                        <option value="headgear5">Visor Cap Staff Officer</option>
+                    </select>
+                    <label for="select-headgear">Headgear</label>
+                </li>
+                <li>
+                    <input type="color" id="colour-headgear-base" name="colour-headgear-base" value="#000">
+                    <label for="colour-headgear-base">Headgear Base</label>
+                </li>
+                <li>
+                    <input type="color" id="colour-headgear-accent" name="colour-headgear-accent" value="#000">
+                    <label for="colour-headgear-accent">Headgear Accent</label>
+                </li>
+                <li>
+                    <input type="color" id="colour-headgear-braid" name="colour-headgear-braid" value="#000">
+                    <label for="colour-headgear-braid">Headgear Braid</label>
                 </li>
             </ul>
         </div>

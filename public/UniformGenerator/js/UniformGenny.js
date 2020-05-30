@@ -48,6 +48,9 @@ window.onload = function () {
 
     var colourTrouserStripe = document.querySelector('#colour-trousers-stripes');
     colourTrouserStripe.addEventListener('change', onColourPickerChange);
+
+    var selectHeadgear = document.querySelector('#select-headgear');
+    selectHeadgear.addEventListener('change', onHeadgearSelectionChange);
   }
 
   function setDefaultValues() {
@@ -167,5 +170,18 @@ window.onload = function () {
         matchingElements[i].setAttribute("fill", `${event.target.value}`)
       }
     }
+  }
+
+  function onHeadgearSelectionChange(event) {
+    var imgElement = document.getElementById("image-headgear");
+    var path = "";
+
+    if (event.target.value == "none") {
+      path = "img/blank.png";
+    } else {
+      path = "img/headgear/" + event.target.value + ".png";
+    }
+
+    imgElement.setAttribute("src", path);
   }
 }
