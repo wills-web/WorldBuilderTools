@@ -1,1 +1,11 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 1000"><defs><style>.cls-1{fill:#fc8b8b;}</style></defs><g id="Belt"><g id="Layer_8" data-name="Layer 8"><rect class="cls-1" x="245.26" y="382" width="158.12" height="22.98"/></g></g></svg>
+<svg id="Layer_1" data-name="Layer 1" 
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 1100">
+    <defs>
+        <!--<style>.cls-1{fill:#fc8b8b;}</style>-->
+    </defs>
+    <g id="Belt">
+        <g id="Layer_8" data-name="Layer 8">
+            <rect id="element-tunic-belt-path" class="cls-1" x="245.26" y="483" width="158.12" height="22.98"/>
+        </g>
+    </g>
+</svg>

@@ -13,26 +13,35 @@ html {
 }
 
 #model-container {
-  height: 1000px;
+  height: 1100px;
   width: 650px;
 
 }
 
-#product-svg {
-  position: relative;
-  z-index: 2;
+.product-svg {
+  position: absolute;
+  height: 1100px;
+  width: 650px;
+  /*z-index: 5;*/
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: 50%;
   mix-blend-mode: multiply;
 }
 
-#background-image {
+.item-headgear {
+  position: absolute;
+  height: 1100px;
+  width: 650px;
+  z-index: 999;
+}
+
+.background-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 650px;
-  height: 1000px;
+  height: 1100px;
   z-index: 1;
 }
 

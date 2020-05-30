@@ -11,14 +11,68 @@
 
         <div id="model-container">
 
-            <object type="image/svg+xml" data="img/tops/Type1/tunic_base.svg" id="product-svg"></object>
+            <img class="item-headgear" src="img/headgear/headgear1.png" style="z-index: 999;">
 
-            <img id="background-image" src="img/test_base.png" alt="">
+            <object type="image/svg+xml" data="img/tops/Type1/tunic_buckle.svg" class="product-svg" id="element-tunic-buckle" style="z-index: 100;"></object>
+            <object type="image/svg+xml" data="img/tops/Type1/tunic_belt.svg" class="product-svg" id="element-tunic-belt" style="z-index: 99;"></object>
+            <object type="image/svg+xml" data="img/tops/Type1/tunic_epaulettebuttons.svg" class="product-svg" id="element-tunic-epaulettebuttons" style="z-index: 90;"></object>
+            <object type="image/svg+xml" data="img/tops/Type1/tunic_jacketbuttons.svg" class="product-svg" id="element-tunic-jacketbuttons" style="z-index: 90;"></object>
+            <object type="image/svg+xml" data="img/tops/Type1/tunic_pocketbuttons.svg" class="product-svg" id="element-tunic-pocketbuttons" style="z-index: 90;"></object>
+            <object type="image/svg+xml" data="img/tops/Type1/tunic_tie.svg" class="product-svg" id="element-tunic-tie" style="z-index: 81;"></object>
+            <object type="image/svg+xml" data="img/tops/Type1/tunic_undershirt.svg" class="product-svg" id="element-tunic-undershirt" style="z-index: 80;"></object>
+            <object type="image/svg+xml" data="img/tops/Type1/tunic_base.svg" class="product-svg" id="element-tunic-base" style="z-index: 10;"></object>
+
+            <object type="image/svg+xml" data="img/trousers/Type1/trousers_stripes.svg" class="product-svg" id="element-trousers-stripes" style="z-index: 9;"></object>
+            <object type="image/svg+xml" data="img/trousers/Type1/trousers_base.svg" class="product-svg" id="element-trousers-base" style="z-index: 8;"></object>
+
+            <img class="background-image" src="img/test_base.png" alt="">
         </div>
 
-        <div class="colors">            
-            <input type="color" id="color-tunic" name="color-tunic" value="#8cd147">
-            <label for="color-tunic">Tunic</label>
+        <div class="colors">
+            <ul>
+                <li>
+                    <input type="color" id="colour-tunic-base" name="colour-tunic-base" value="#000">
+                    <label for="colour-tunic-base">Tunic Base</label>
+                </li>
+                <li>
+                    <input type="color" id="colour-tunic-belt" name="colour-tunic-belt" value="#000">
+                    <label for="colour-tunic-belt">Tunic Belt</label>
+                </li>
+                <li>
+                    <input type="color" id="colour-tunic-buckle" name="colour-tunic-buckle" value="#000">
+                    <label for="colour-tunic-buckle">Tunic Belt Buckle</label>
+                </li>
+                <li>
+                    <input type="color" id="colour-tunic-jacketbuttons" name="colour-tunic-jacketbuttons" value="#000">
+                    <label for="colour-tunic-jacketbuttons">Tunic Jacket Buttons</label>
+                </li>
+                <li>
+                    <input type="color" id="colour-tunic-pocketbuttons" name="colour-tunic-pocketbuttons" value="#000">
+                    <label for="colour-tunic-pocketbuttons">Tunic Pocket Buttons</label>
+                </li>
+                <li>
+                    <input type="color" id="colour-tunic-epaulettebuttons" name="colour-tunic-epaulettebuttons" value="#000">
+                    <label for="colour-tunic-epaulettebuttons">Tunic Epaulette Buttons</label>
+                </li>
+                <li>
+                    <input type="color" id="colour-tunic-undershirt" name="colour-tunic-undershirt" value="#000">
+                    <label for="colour-tunic-undershirt">Tunic Undershirt</label>
+                </li>
+                <li>
+                    <input type="color" id="colour-tunic-tie" name="colour-tunic-tie" value="#000">
+                    <label for="colour-tunic-tie">Tunic Tie</label>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <input type="color" id="colour-trousers-base" name="colour-trousers-base" value="#000">
+                    <label for="colour-trousers-base">Trousers</label>
+                </li>
+                <li>
+                    <input type="color" id="colour-trousers-stripes" name="colour-trousers-stripes" value="#000">
+                    <label for="colour-trousers-stripes">Trouser Stripes</label>
+                </li>
+            </ul>
         </div>
 
     </div>
