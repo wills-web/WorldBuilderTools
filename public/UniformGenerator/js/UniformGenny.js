@@ -1,4 +1,4 @@
-window.onload = function () {
+/*window.onload = function () {
   console.log("SAUSAGE")
   // Get the Object by ID
   var a = document.getElementById("product-svg");
@@ -10,8 +10,8 @@ window.onload = function () {
   const svgItem = svgDoc.getElementById("product-shape");
 
   // Set the colour to something else
-  /*svgItem.setAttribute("fill", "#00FF00");
-  console.log("ROLLS")*/
+  //svgItem.setAttribute("fill", "#00FF00");
+  //console.log("ROLLS")
 
   // Event listeners
   var el = document.getElementsByClassName("color");
@@ -34,4 +34,25 @@ window.onload = function () {
     svgItem.setAttribute("fill", hex);
   }
 
-};
+};*/
+
+window.onload = function() {
+  // Entry-point
+  var svgElement = document.getElementById("product-svg");
+  var svgDocument = svgElement.contentDocument;
+  const svgItem = svgDocument.getElementById("product-shape");
+
+  registerElements();
+
+  function registerElements() {
+    console.log("Registering colour pickers");
+
+    const colourTunic = document.querySelector('#color-tunic');
+    colourTunic.addEventListener('change', onColourPickerChange);
+  }
+
+  function onColourPickerChange(event) {
+    console.log("Colour picker has changed")
+    svgItem.setAttribute("fill", `${event.target.value}`);
+  }
+}
