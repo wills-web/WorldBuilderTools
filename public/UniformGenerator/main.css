@@ -12,9 +12,9 @@ html {
   box-sizing: border-box;
 }
 
-#container {
-  height: 100%;
-  width: 100%;
+#model-container {
+  height: 1000px;
+  width: 650px;
 
 }
 
@@ -27,16 +27,12 @@ html {
   mix-blend-mode: multiply;
 }
 
-#product-shape {
-  fill: #DBED64;
-}
-
 #background-image {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: auto;
+  width: 650px;
+  height: 1000px;
   z-index: 1;
 }
 
@@ -56,4 +52,14 @@ html {
   box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
   border: 2px solid #aaa;
   cursor: pointer;
+}
+
+
+p,
+label {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
 }

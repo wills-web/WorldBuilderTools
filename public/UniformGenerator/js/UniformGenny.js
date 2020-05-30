@@ -1,16 +1,37 @@
-// Reference the color shape that was drawn over the image
-const overlay = document.getElementById("product-shape");
+window.onload = function () {
+  console.log("SAUSAGE")
+  // Get the Object by ID
+  var a = document.getElementById("product-svg");
 
-// Click on a color
+  // Get the SVG document inside the Object tag
+  var svgDoc = a.contentDocument;
 
-var el = document.getElementsByClassName("color");
-for (var i = 0; i < el.length; i++) {
-  el[i].onclick = changeColor;
-}
+  // Get one of the SVG items by ID;
+  const svgItem = svgDoc.getElementById("product-shape");
 
-function changeColor(e) {
-  // get the hex color
-  let hex = e.target.getAttribute("data-hex");
-  // set the hex color
-  overlay.style.fill = hex;
-}
+  // Set the colour to something else
+  /*svgItem.setAttribute("fill", "#00FF00");
+  console.log("ROLLS")*/
+
+  // Event listeners
+  var el = document.getElementsByClassName("color");
+  for (var i = 0; i < el.length; i++) {
+    el[i].onclick = changeColor;
+  }
+
+  // Colour picker
+  const selectElement = document.querySelector('#color-tunic');
+
+  selectElement.addEventListener('change', (event) => {
+    svgItem.setAttribute("fill", `${event.target.value}`);
+  });
+
+  // Colour changer
+  function changeColor(e) {
+    // get the hex color
+    let hex = e.target.getAttribute("data-hex");
+    // set the hex color
+    svgItem.setAttribute("fill", hex);
+  }
+
+};
