@@ -3,6 +3,9 @@
 
 <head>
     <title>Uniform Generator</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="main.css" type="text/css" rel="stylesheet" />
 </head>
 
@@ -12,6 +15,7 @@
         <div id="model-container">
 
             <img id="image-headgear" class="item-headgear" src="img/blank.png" style="z-index: 999;">
+            <img id="element-headgear-slot" class="item-headgear" src="img/blank.png" style="z-index: 999;">
 
             <object type="image/svg+xml" data="img/tops/Type1/tunic_buckle.svg" class="product-svg"
                 id="element-tunic-buckle" style="z-index: 100;"></object>
@@ -91,33 +95,49 @@
             <ul>
                 <li>
                     <select id="select-headgear" name="select-headgear">
-                        <option value="none" default>No Headgear</option>
-                        <option value="headgear1">Kepi with Feather</option>
-                        <option value="headgear2">Pith Helmet</option>
-                        <option value="headgear3">Visor Cap Enlisted</option>
-                        <option value="headgear4">Visor Cap Officer</option>
-                        <option value="headgear5">Visor Cap Staff Officer</option>
+                        <option value="none" default>Kepi with Feather</option>
+                        <option value="none" default>Pith Helmet</option>
+                        <option value="none" default>Visor / Saddle / Crestless</option>
+                        <option value="none" default>Visor / Saddle / Crested</option>
                     </select>
                     <label for="select-headgear">Headgear</label>
                 </li>
+
+
                 <!--<li>
                     <input type="color" id="colour-headgear-base" name="colour-headgear-base" value="#000">
                     <label for="colour-headgear-base">Headgear Base</label>
                 </li>
                 <li>
                     <input type="color" id="colour-headgear-accent" name="colour-headgear-accent" value="#000">
-                    <label for="colour-headgear-accent">Headgear Accent</label>
+                    <label for="colour-headgear-accent">Headgear Band/Accent</label>
                 </li>
                 <li>
                     <input type="color" id="colour-headgear-braid" name="colour-headgear-braid" value="#000">
                     <label for="colour-headgear-braid">Headgear Braid</label>
+                </li>
+                <li>
+                    <input type="color" id="colour-headgear-lining" name="colour-headgear-lining" value="#000">
+                    <label for="colour-headgear-lining">Headgear Visor/Lining</label>
                 </li>-->
             </ul>
         </div>
 
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
     <script src="js/UniformGenny.js"></script>
+    <script src="js/UniformLoader.js"></script>
+
+    <script>
+        window.onload = function () {
+            //UniformLoader();
+            UniformGenerator();
+        }
+    </script>
 </body>
 
 </html>

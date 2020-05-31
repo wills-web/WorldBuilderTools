@@ -1,0 +1,19 @@
+{
+    "name": "Saddle Cap",
+    
+    "category": "Headgear",
+    "type": "Visor",
+    "subtype": "Saddle",
+    
+    "basevariations": {
+        "Crestless": "visor-base-1.png",
+        "Crests": "visor-base-2.png"
+    },
+    
+    "components": {
+        "visor-band.svg": "#FF0000",
+        "visor-braiding.svg": "#FFFFFF",
+        "visor-cap.svg": "#00FF00",
+        "visor-visor.svg": "#0000FF"
+    }
+}

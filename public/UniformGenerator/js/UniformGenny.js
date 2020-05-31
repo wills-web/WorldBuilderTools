@@ -1,5 +1,5 @@
 
-window.onload = function () {
+function UniformGenerator () {
   // Entry-point
   const tunicBase = loadSvgFromFile("element-tunic-base");
   const tunicBelt = loadSvgFromFile("element-tunic-belt");
@@ -49,8 +49,8 @@ window.onload = function () {
     var colourTrouserStripe = document.querySelector('#colour-trousers-stripes');
     colourTrouserStripe.addEventListener('change', onColourPickerChange);
 
-    var selectHeadgear = document.querySelector('#select-headgear');
-    selectHeadgear.addEventListener('change', onHeadgearSelectionChange);
+    /*var selectHeadgear = document.querySelector('#select-headgear');
+    selectHeadgear.addEventListener('change', onHeadgearSelectionChange);*/
   }
 
   function setDefaultValues() {
@@ -172,7 +172,7 @@ window.onload = function () {
     }
   }
 
-  function onHeadgearSelectionChange(event) {
+  /*function onHeadgearSelectionChange(event) {
     var imgElement = document.getElementById("image-headgear");
     var path = "";
 
@@ -183,5 +183,5 @@ window.onload = function () {
     }
 
     imgElement.setAttribute("src", path);
-  }
+  }*/
 }
