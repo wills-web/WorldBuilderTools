@@ -10,12 +10,87 @@
 </head>
 
 <body>
-    <div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h2>Uniform Creator</h2>
+                <p>A tool designed to create your very own unique military uniforms. Currently in a primitive stage of
+                    development to showcase capabilities.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <!-- Model container col -->
+            <div class="col">
+                <div id="model-container">
+                    <div id="elements-container">
+
+                        <!-- Test Tunic Base -->
+                        <!--<object type="image/svg+xml" data="img/tops/Type1/tunic_base.svg" class="product-svg"
+                            id="element-tunic-base" style="z-index: 10;"></object>-->
+                    </div>
+
+                    <img class="background-image" src="img/test_base.png" alt="">
+                </div>
+            </div>
+
+            <!-- Options interface col -->
+            <div class="col">
+                <nav>
+                    <div class="nav nav-tabs" id="category-nav" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-element-tops-tab" data-toggle="tab"
+                            href="#nav-element-tops" role="tab" aria-controls="nav-element-tops"
+                            aria-selected="true">Tops</a>
+                        <a class="nav-item nav-link" id="nav-element-trousers-tab" data-toggle="tab"
+                            href="#nav-element-trousers" role="tab" aria-controls="nav-element-trousers"
+                            aria-selected="false">Trousers</a>
+                        <a class="nav-item nav-link" id="nav-element-Headgear-tab" data-toggle="tab"
+                            href="#nav-element-Headgear" role="tab" aria-controls="nav-element-Headgear"
+                            aria-selected="false">Headgear</a>
+                        <a class="nav-item nav-link" id="nav-element-accessories-tab" data-toggle="tab"
+                            href="#nav-element-accessories" role="tab" aria-controls="nav-element-accessories"
+                            aria-selected="false">Accessories</a>
+                    </div>
+                </nav>
+                <div class="tab-content" id="category-nav-content">
+                    <div class="tab-pane fade show active" id="nav-element-tops" role="tabpanel"
+                        aria-labelledby="nav-element-tops-tab">
+                        
+                        <input type="checkbox"> Label <input type="color">
+
+                    </div>
+                    <div class="tab-pane fade" id="nav-element-trousers" role="tabpanel"
+                        aria-labelledby="nav-element-trousers-tab">
+                        ...
+                    </div>
+                    <div class="tab-pane fade" id="nav-element-Headgear" role="tabpanel"
+                        aria-labelledby="nav-element-Headgear-tab">
+
+                        <label for="Headgear-select">Headgear:</label>
+                        <select name="Headgear-select" id="Headgear-select">
+                            <option value="none" selected>- None -</option>
+                        </select>
+                        <div id="Headgear-options"></div>
+
+                    </div>
+                    <div class="tab-pane fade" id="nav-element-accessories" role="tabpanel"
+                        aria-labelledby="nav-element-accessories-tab">
+                        ...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--<div>
+
 
         <div id="model-container">
 
-            <img id="image-headgear" class="item-headgear" src="img/blank.png" style="z-index: 999;">
-            <img id="element-headgear-slot" class="item-headgear" src="img/blank.png" style="z-index: 999;">
+            <img id="image-Headgear" class="item-Headgear" src="img/blank.png" style="z-index: 999;">
+            <img id="element-Headgear-slot" class="item-Headgear" src="img/blank.png" style="z-index: 999;">
 
             <object type="image/svg+xml" data="img/tops/Type1/tunic_buckle.svg" class="product-svg"
                 id="element-tunic-buckle" style="z-index: 100;"></object>
@@ -94,48 +169,55 @@
             </ul>
             <ul>
                 <li>
-                    <select id="select-headgear" name="select-headgear">
+                    <select id="select-Headgear" name="select-Headgear">
                         <option value="none" default>Kepi with Feather</option>
                         <option value="none" default>Pith Helmet</option>
                         <option value="none" default>Visor / Saddle / Crestless</option>
                         <option value="none" default>Visor / Saddle / Crested</option>
                     </select>
-                    <label for="select-headgear">Headgear</label>
+                    <label for="select-Headgear">Headgear</label>
                 </li>
 
 
-                <!--<li>
-                    <input type="color" id="colour-headgear-base" name="colour-headgear-base" value="#000">
-                    <label for="colour-headgear-base">Headgear Base</label>
+                <li>
+                    <input type="color" id="colour-Headgear-base" name="colour-Headgear-base" value="#000">
+                    <label for="colour-Headgear-base">Headgear Base</label>
                 </li>
                 <li>
-                    <input type="color" id="colour-headgear-accent" name="colour-headgear-accent" value="#000">
-                    <label for="colour-headgear-accent">Headgear Band/Accent</label>
+                    <input type="color" id="colour-Headgear-accent" name="colour-Headgear-accent" value="#000">
+                    <label for="colour-Headgear-accent">Headgear Band/Accent</label>
                 </li>
                 <li>
-                    <input type="color" id="colour-headgear-braid" name="colour-headgear-braid" value="#000">
-                    <label for="colour-headgear-braid">Headgear Braid</label>
+                    <input type="color" id="colour-Headgear-braid" name="colour-Headgear-braid" value="#000">
+                    <label for="colour-Headgear-braid">Headgear Braid</label>
                 </li>
                 <li>
-                    <input type="color" id="colour-headgear-lining" name="colour-headgear-lining" value="#000">
-                    <label for="colour-headgear-lining">Headgear Visor/Lining</label>
-                </li>-->
+                    <input type="color" id="colour-Headgear-lining" name="colour-Headgear-lining" value="#000">
+                    <label for="colour-Headgear-lining">Headgear Visor/Lining</label>
+                </li>
             </ul>
         </div>
 
-    </div>
+    </div>-->
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
 
-    <script src="js/UniformGenny.js"></script>
-    <script src="js/UniformLoader.js"></script>
+    <!--<script src="js/UniformGenny.js"></script>
+    <script src="js/UniformLoader.js"></script>-->
+
+    <script src="js/ElementLoader.js"></script>
 
     <script>
         window.onload = function () {
-            //UniformLoader();
-            UniformGenerator();
+            // Loads the content from the various json files into memory
+            loadElements();
         }
     </script>
 </body>

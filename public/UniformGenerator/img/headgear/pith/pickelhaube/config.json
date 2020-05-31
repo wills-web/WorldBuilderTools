@@ -1,0 +1,14 @@
+{
+    "name": "Pith Pickelhaube Helmet",
+    "category": "Headgear",
+    "type": "Pith",
+    "subtype": "Pickelhaube",
+
+    "basevariations": { 
+        "default": "pith-base-1.png"
+    },
+
+    "components": [
+        
+    ]
+}

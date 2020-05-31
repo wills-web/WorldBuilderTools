@@ -49,7 +49,7 @@ function UniformGenerator () {
     var colourTrouserStripe = document.querySelector('#colour-trousers-stripes');
     colourTrouserStripe.addEventListener('change', onColourPickerChange);
 
-    /*var selectHeadgear = document.querySelector('#select-headgear');
+    /*var selectHeadgear = document.querySelector('#select-Headgear');
     selectHeadgear.addEventListener('change', onHeadgearSelectionChange);*/
   }
 
@@ -173,13 +173,13 @@ function UniformGenerator () {
   }
 
   /*function onHeadgearSelectionChange(event) {
-    var imgElement = document.getElementById("image-headgear");
+    var imgElement = document.getElementById("image-Headgear");
     var path = "";
 
     if (event.target.value == "none") {
       path = "img/blank.png";
     } else {
-      path = "img/headgear/" + event.target.value + ".png";
+      path = "img/Headgear/" + event.target.value + ".png";
     }
 
     imgElement.setAttribute("src", path);

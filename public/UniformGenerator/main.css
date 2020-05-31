@@ -13,15 +13,15 @@ html {
 }
 
 #model-container {
-  height: 1100px;
-  width: 650px;
+  height: 800px;
+  width: auto;
 
 }
 
-.product-svg {
+.element-svg {
   position: absolute;
-  height: 1100px;
-  width: 650px;
+  height: 800px;
+  width: auto;
   /*z-index: 5;*/
   background-size: 100%;
   background-repeat: no-repeat;
@@ -29,20 +29,26 @@ html {
   mix-blend-mode: multiply;
 }
 
-.item-headgear {
+.item-Headgear {
   position: absolute;
-  height: 1100px;
-  width: 650px;
+  height: 800px;
+  width: auto;
   z-index: 999;
 }
 
 .background-image {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 650px;
-  height: 1100px;
+  /*top: 0;
+  left: 0;*/
+  height: 800px;
+  width: auto;
   z-index: 1;
+}
+
+.element-base-image {
+  position: absolute;
+  height: 800px;
+  width: auto;
 }
 
 .options {
@@ -79,4 +85,14 @@ label {
 
 input {
     margin: .4rem;
+}
+
+#category-nav-content {
+  border-left: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+
+  height: 750px;
+  overflow: auto;
+  padding: 10px;
 }

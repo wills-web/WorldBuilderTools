@@ -1,19 +1,38 @@
 {
     "name": "Saddle Cap",
-    
     "category": "Headgear",
     "type": "Visor",
     "subtype": "Saddle",
-    
-    "basevariations": {
-        "Crestless": "visor-base-1.png",
+
+    "basevariations": { 
+        "default": "visor-base-1.png",
         "Crests": "visor-base-2.png"
     },
-    
-    "components": {
-        "visor-band.svg": "#FF0000",
-        "visor-braiding.svg": "#FFFFFF",
-        "visor-cap.svg": "#00FF00",
-        "visor-visor.svg": "#0000FF"
-    }
+
+    "components": [
+        {
+            "path": "visor-band.svg",
+            "name": "Band",
+            "colour": "#FF0000",
+            "toggleable": "true"
+        },
+        {
+            "path": "visor-braiding.svg",
+            "name": "Braiding",
+            "colour": "#00FF00",
+            "toggleable": "false"
+        },
+        {
+            "path": "visor-cap.svg",
+            "name": "Cap",
+            "colour": "#0000FF",
+            "toggleable": "false"
+        },
+        {
+            "path": "visor-visor.svg",
+            "name": "Visor",
+            "colour": "#F0F0F0",
+            "toggleable": "false"
+        }
+    ]
 }
