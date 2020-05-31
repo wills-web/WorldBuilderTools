@@ -13,25 +13,25 @@
         {
             "path": "visor-band.svg",
             "name": "Band",
-            "colour": "#FF0000",
-            "toggleable": "true"
+            "colour": "#E3E3E3",
+            "toggleable": "false"
         },
         {
             "path": "visor-braiding.svg",
             "name": "Braiding",
-            "colour": "#00FF00",
+            "colour": "#B88E19",
             "toggleable": "false"
         },
         {
             "path": "visor-cap.svg",
             "name": "Cap",
-            "colour": "#0000FF",
+            "colour": "#696969",
             "toggleable": "false"
         },
         {
             "path": "visor-visor.svg",
             "name": "Visor",
-            "colour": "#F0F0F0",
+            "colour": "#6B6B6B",
             "toggleable": "false"
         }
     ]
