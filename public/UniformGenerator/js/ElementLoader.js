@@ -7,7 +7,7 @@ const elementList = [
     "img/Headgear/pith/pickelhaube/"
 ]
 
-const rootUrl = "http://localhost:8000/UniformGenerator/"
+const rootUrl = "http://wills-web.com/WorldBuilderTools/public/UniformGenerator/"
 const HeadgearTabPane = "#nav-element-Headgear";
 
 function loadElements() {
