@@ -1,10 +1,10 @@
 const elementList = [
-    "img/Tops/tunic/Type1/",
+    "img/tops/tunic/Type1/",
 
-    "img/Trousers/dress/Type1/",
+    "img/trousers/dress/Type1/",
 
-    "img/Headgear/visor/saddle/",
-    "img/Headgear/pith/pickelhaube/"
+    "img/headgear/visor/saddle/",
+    "img/headgear/pith/pickelhaube/"
 ]
 
 const rootUrl = "http://wills-web.com/WorldBuilderTools/public/UniformGenerator/"
