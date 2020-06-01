@@ -9,6 +9,29 @@
     },
 
     "components": [
-        
+        {
+            "path": "pith-base.svg",
+            "name": "Base",
+            "colour": "#696969",
+            "toggleable": "false"
+        },
+        {
+            "path": "pith-band.svg",
+            "name": "Band",
+            "colour": "#E3E3E3",
+            "toggleable": "false"
+        },
+        {
+            "path": "pith-lining.svg",
+            "name": "Lining",
+            "colour": "#A1542B",
+            "toggleable": "false"
+        },
+        {
+            "path": "pith-spike.svg",
+            "name": "Spike",
+            "colour": "#FFFFFF",
+            "toggleable": "false"
+        }
     ]
 }

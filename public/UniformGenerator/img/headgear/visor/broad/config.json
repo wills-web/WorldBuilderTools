@@ -1,0 +1,38 @@
+{
+    "name": "Broad Cap",
+    "category": "Headgear",
+    "type": "Visor",
+    "subtype": "Broad",
+
+    "basevariations": { 
+        "default": "visor-base-1.png",
+        "Straps": "visor-base-2.png"
+    },
+
+    "components": [
+        {
+            "path": "visor-band.svg",
+            "name": "Band",
+            "colour": "#E3E3E3",
+            "toggleable": "false"
+        },
+        {
+            "path": "visor-braiding.svg",
+            "name": "Braiding",
+            "colour": "#B88E19",
+            "toggleable": "false"
+        },
+        {
+            "path": "visor-cap.svg",
+            "name": "Cap",
+            "colour": "#696969",
+            "toggleable": "false"
+        },
+        {
+            "path": "visor-visor.svg",
+            "name": "Visor",
+            "colour": "#6B6B6B",
+            "toggleable": "false"
+        }
+    ]
+}

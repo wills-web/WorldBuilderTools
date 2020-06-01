@@ -3,11 +3,12 @@ const elementList = [
 
     "img/trousers/dress/Type1/",
 
-    "img/headgear/visor/saddle/",
-    "img/headgear/pith/pickelhaube/"
+    "img/Headgear/visor/broad/",
+    "img/Headgear/visor/saddle/",
+    "img/Headgear/pith/pickelhaube/"
 ]
 
-const rootUrl = "http://wills-web.com/WorldBuilderTools/public/UniformGenerator/"
+const rootUrl = "http:/localhost:8000/UniformGenerator/"
 const HeadgearTabPane = "#nav-element-Headgear";
 
 function loadElements() {
@@ -32,18 +33,11 @@ function registerEventHandlers() {
 }
 
 function loadElement(item, index) {
-    var elementUrl = rootUrl + item;
+    var elementUrl = item; // For localhost, this needs to be set for some unknown reason
+    //var elementUrl = rootUrl + item; // This works for production, I think?
 
     $.getJSON(elementUrl + "config.json")
         .done(function (data) {
-            /*switch (data.category) {
-                case "Headgear":
-                    loadHeadgear(data, index, elementUrl);
-                    break;
-                default:
-                    console.log("Ooopsie doodle! Category config for " + item + " is invalid.");
-                    break;
-            }*/
             loadElementFromData(data, index, elementUrl);
         })
         .fail(function (jqhxr, textStatus, error) {
@@ -52,25 +46,7 @@ function loadElement(item, index) {
 }
 
 function loadElementFromData(jsonConfig, index, elementUrl) {
-    var zindexBase = 0;
-
-    switch (jsonConfig.category) {
-        case "Tops":
-            zindexBase = 2000;
-            break;
-        case "Trousers":
-            zindexBase = 1000;
-            break;
-        case "Headgear":
-            zindexBase = 8000;
-            break;
-        case "Accessories":
-            zindexBase = 9000;
-            break;
-    }
-    
-    var zindex = zindexBase + index; // '9001', etc
-    
+    var zindex = determineZIndex(jsonConfig, index);
     var elementDivId = 'element-' + jsonConfig.category + '-' + jsonConfig.type + '-' + jsonConfig.subtype;
     var elementOptionsDivId = elementDivId + '-options';
     var elementVariationPath = elementUrl + jsonConfig.basevariations["default"];
@@ -109,7 +85,7 @@ function loadElementFromData(jsonConfig, index, elementUrl) {
         // Set the default colours
         setTimeout(function (component, colour) {
             setSvgFillByObjectId(component, colour);
-        }, 200, componentId, jsonConfig.components[i].colour); // Need to foolproof this for slow machines?
+        }, 500, componentId, jsonConfig.components[i].colour); // Need to foolproof this for slow machines?
 
         //setSvgFillByObjectId(componentId, jsonConfig.components[i].colour);
 
@@ -205,4 +181,25 @@ function sortSelect(selElem) {
         selElem.options[i] = op;
     }
     return;
+}
+
+function determineZIndex(jsonConfig, index) {
+    var zindexBase = 0;
+
+    switch (jsonConfig.category) {
+        case "Tops":
+            zindexBase = 2000;
+            break;
+        case "Trousers":
+            zindexBase = 1000;
+            break;
+        case "Headgear":
+            zindexBase = 8000;
+            break;
+        case "Accessories":
+            zindexBase = 9000;
+            break;
+    }
+    
+    return zindexBase + index; // '9001', etc
 }
