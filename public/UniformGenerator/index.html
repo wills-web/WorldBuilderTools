@@ -31,7 +31,7 @@
                             id="element-tunic-base" style="z-index: 10;"></object>-->
                     </div>
 
-                    <img class="background-image" src="img/test_base.png" alt="">
+                    <img class="background-image" src="img/mannequin-base.png" alt="">
                 </div>
             </div>
 
@@ -66,7 +66,13 @@
                     </div>
                     <div class="tab-pane fade" id="nav-element-trousers" role="tabpanel"
                         aria-labelledby="nav-element-trousers-tab">
-                        ...
+                        
+                        <label for="Trousers-select">Trousers:</label>
+                        <select name="Trousers-select" id="Trousers-select" onfocus="this.oldvalue = this.value;">
+                            <option value="none" selected>- None -</option>
+                        </select>
+                        <div id="Trousers-options"></div>
+
                     </div>
                     <div class="tab-pane fade" id="nav-element-Headgear" role="tabpanel"
                         aria-labelledby="nav-element-Headgear-tab">
@@ -80,7 +86,13 @@
                     </div>
                     <div class="tab-pane fade" id="nav-element-accessories" role="tabpanel"
                         aria-labelledby="nav-element-accessories-tab">
-                        ...
+                        
+                        <label for="Accessories-select">Accessories:</label>
+                        <select name="Accessories-select" id="Accessories-select" onfocus="this.oldvalue = this.value;">
+                            <option value="none" selected>- None -</option>
+                        </select>
+                        <div id="Accessories-options"></div>
+
                     </div>
                 </div>
             </div>
@@ -105,7 +117,10 @@
             loadElements();
 
             setTimeout(function() {
+                sortSelect(document.getElementById('Tops-select'));
+                sortSelect(document.getElementById('Trousers-select'));
                 sortSelect(document.getElementById('Headgear-select'));
+                sortSelect(document.getElementById('Accessories-select'));
             }, 300);
         }
     </script>

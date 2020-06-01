@@ -1,26 +1,34 @@
 const elementList = [
-    "img/Headgear/visor/saddle/",
-    "img/Headgear/pith/pickelhaube/",
+    "img/Tops/tunic/Type1/",
 
-    "img/Tops/tunic/Type1/"
+    "img/Trousers/dress/Type1/",
+
+    "img/Headgear/visor/saddle/",
+    "img/Headgear/pith/pickelhaube/"
 ]
 
 const rootUrl = "http://localhost:8000/UniformGenerator/"
 const HeadgearTabPane = "#nav-element-Headgear";
 
 function loadElements() {
-    console.log("Starting to load elements");
+    //console.log("Starting to load elements");
     elementList.forEach(loadElement);
 
     registerEventHandlers();
 }
 
 function registerEventHandlers() {
-    var tunicSelect = document.querySelector('#Tops-select');
-    tunicSelect.addEventListener('change', onSelectValueChanged);
+    var topSelect = document.querySelector('#Tops-select');
+    topSelect.addEventListener('change', onSelectValueChanged);
+
+    var trouserSelect = document.querySelector('#Trousers-select');
+    trouserSelect.addEventListener('change', onSelectValueChanged);
 
     var headgearSelect = document.querySelector('#Headgear-select');
     headgearSelect.addEventListener('change', onSelectValueChanged);
+
+    var accessoriesSelect = document.querySelector('#Accessories-select');
+    accessoriesSelect.addEventListener('change', onSelectValueChanged);
 }
 
 function loadElement(item, index) {
@@ -44,7 +52,25 @@ function loadElement(item, index) {
 }
 
 function loadElementFromData(jsonConfig, index, elementUrl) {
-    var zindex = 9000 + index; // '9001', etc
+    var zindexBase = 0;
+
+    switch (jsonConfig.category) {
+        case "Tops":
+            zindexBase = 2000;
+            break;
+        case "Trousers":
+            zindexBase = 1000;
+            break;
+        case "Headgear":
+            zindexBase = 8000;
+            break;
+        case "Accessories":
+            zindexBase = 9000;
+            break;
+    }
+    
+    var zindex = zindexBase + index; // '9001', etc
+    
     var elementDivId = 'element-' + jsonConfig.category + '-' + jsonConfig.type + '-' + jsonConfig.subtype;
     var elementOptionsDivId = elementDivId + '-options';
     var elementVariationPath = elementUrl + jsonConfig.basevariations["default"];
@@ -59,7 +85,7 @@ function loadElementFromData(jsonConfig, index, elementUrl) {
 
     // Next create the interface
     $('#' + jsonConfig.category + '-select').append(
-        '<option value="' + elementDivId + '">' + elementReadableName + '</option>'
+        '<option value="' + elementDivId + '">' + jsonConfig.name + '</option>'
     );
 
     // Create the options ui
@@ -115,7 +141,7 @@ function loadElementFromData(jsonConfig, index, elementUrl) {
             colourSelector.addEventListener('change', onColourValueChanges);
         }
 
-        console.log(componentId);
+        //console.log(componentId);
     }
 
     // Finally, hide it all :)
@@ -128,13 +154,13 @@ function loadElementFromData(jsonConfig, index, elementUrl) {
 function setSvgFillByObjectId(objectId, colour) {
     var vectorPaths = getSvgPathsFromObject(objectId)
     for (var i = 0; i < vectorPaths.length; i++) {
-        console.log("filling");
+        //console.log("filling");
         vectorPaths[i].setAttribute("fill", colour)
     }
 }
 
 function getSvgPathsFromObject(objectId) {
-    console.log("Trying2: " + objectId);
+    //console.log("Trying2: " + objectId);
     var svgElement = document.getElementById(objectId);
     var svgDocument = svgElement.contentDocument;
     return svgDocument.querySelectorAll('[id=' + objectId + '-path]');
@@ -142,6 +168,7 @@ function getSvgPathsFromObject(objectId) {
 
 // Handles when any of the category dropdowns is changed.
 function onSelectValueChanged(event) {
+    console.log("Asking to update select");
     $('#' + event.target.oldvalue).hide();
     $('#' + event.target.oldvalue + '-options').hide();
     $('#' + event.target.value).show();
@@ -156,7 +183,7 @@ function onColourValueChanges(event) {
 
 function onToggleValueChanges(event) {
     var objectToUpdate = event.target.id.substring(0, event.target.id.length - 7).replace("-options", "");
-    console.log(event.target.checked);
+    //console.log(event.target.checked);
     
     if (event.target.checked) $('#' + objectToUpdate).show();
     else $('#' + objectToUpdate).hide();

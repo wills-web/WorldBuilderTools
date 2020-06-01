@@ -1,0 +1,16 @@
+<svg id="Trousers" 
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 1100">
+    <defs>
+        <!--<style>.cls-1{fill:#f18a8c;}</style>-->
+    </defs>
+    <g id="Dress">
+        <g id="Type1">
+            <g id="Overlay">
+                <g id="Stripes">
+                    <polygon id="element-Trousers-Dress-Type1-Stripes-path" class="cls-1" points="251.01 1017 242.62 639.05 242.62 578.1 247.34 525.45 253.97 527.1 250.06 579.49 249.83 639.54 257.03 1019.97 251.01 1017"/>
+                    <polygon id="element-Trousers-Dress-Type1-Stripes-path" class="cls-1" points="398.05 1017 406.43 639.05 406.43 578.1 401.71 525.45 395.08 527.1 398.99 579.49 399.22 639.54 392.02 1019.97 398.05 1017"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
