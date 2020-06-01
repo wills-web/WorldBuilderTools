@@ -4,9 +4,9 @@ const elementList = [
     "img/trousers/dress/Type1/",
     "img/trousers/dress/Type2/",
 
-    "img/Headgear/visor/broad/",
-    "img/Headgear/visor/saddle/",
-    "img/Headgear/pith/pickelhaube/"
+    "img/headgear/visor/broad/",
+    "img/headgear/visor/saddle/",
+    "img/headgear/pith/pickelhaube/"
 ]
 
 const rootUrl = "http:/localhost:8000/UniformGenerator/"
