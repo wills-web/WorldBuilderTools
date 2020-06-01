@@ -29,6 +29,16 @@ html {
   mix-blend-mode: multiply;
 }
 
+.element-mask {
+  position: absolute;
+  height: 800px;
+  width: auto;
+  /*z-index: 5;*/
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
 .item-Headgear {
   position: absolute;
   height: 800px;

@@ -2,6 +2,7 @@ const elementList = [
     "img/tops/tunic/Type1/",
 
     "img/trousers/dress/Type1/",
+    "img/trousers/dress/Type2/",
 
     "img/Headgear/visor/broad/",
     "img/Headgear/visor/saddle/",
@@ -92,7 +93,7 @@ function loadElementFromData(jsonConfig, index, elementUrl) {
         // Create the option ui
         $('#' + elementOptionsDivId).append(
             '<div id="' + componentOptionsDivId + '">' +
-            '<span id="' + componentOptionsDivId + '-label">' + jsonConfig.components[i].name + '</span>' +
+            '<span id="' + componentOptionsDivId + '-label">' + jsonConfig.components[i].name.replace("_", " ") + '</span>' +
             '</div>'
         );
 
@@ -149,6 +150,15 @@ function onSelectValueChanged(event) {
     $('#' + event.target.oldvalue + '-options').hide();
     $('#' + event.target.value).show();
     $('#' + event.target.value + '-options').show();
+
+    if (event.target.id == "Tops-select" && event.target.oldvalue == "none" && event.target.value != "none") {
+        console.log("top mask on");
+        $('#Tops-mask').show();
+    } else if (event.target.id == "Tops-select" && event.target.value == "none") {
+        console.log("top mask off");
+        $('#Tops-mask').hide();
+    }
+
     event.target.oldvalue = event.target.value;
 }
 

@@ -1,0 +1,55 @@
+{
+    "name": "Type 2 Dress Trousers",
+    "category": "Trousers",
+    "type": "Dress",
+    "subtype": "Type2",
+
+    "basevariations": { 
+        "default": "dress-base-1.png"
+    },
+
+    "components": [
+        {
+            "path": "dress-base.svg",
+            "name": "Base",
+            "colour": "#696969",
+            "toggleable": "false"
+        },
+        {
+            "path": "dress-belt.svg",
+            "name": "Belt",
+            "colour": "#E3E3E3",
+            "toggleable": "false"
+        },
+        {
+            "path": "dress-buckle.svg",
+            "name": "Buckle",
+            "colour": "#B88E19",
+            "toggleable": "false"
+        },
+        {
+            "path": "dress-upperboot.svg",
+            "name": "Upper_Boot",
+            "colour": "#292929",
+            "toggleable": "false"
+        },
+        {
+            "path": "dress-lowerboot.svg",
+            "name": "Lower_Boot",
+            "colour": "#292929",
+            "toggleable": "false"
+        },
+        {
+            "path": "dress-bootband.svg",
+            "name": "Boot_Band",
+            "colour": "#E3E3E3",
+            "toggleable": "false"
+        },
+        {
+            "path": "dress-bootsoles.svg",
+            "name": "Boot_Soles",
+            "colour": "#0F0F0F",
+            "toggleable": "false"
+        }
+    ]
+}
